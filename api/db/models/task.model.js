@@ -10,13 +10,13 @@ const TaskSchema = new mongoose.Schema({
     _listId: {
         type: mongoose.Types.ObjectId,
         required: true
+    },
+    completed: {
+        type: Boolean,
+        default: false
     }
-    // completed: {
-    //     type: Boolean,
-    //     default: false
-    // }
 })
 
 const Task = mongoose.model('Task', TaskSchema);
 
-module.exports = { Task }
+module.exports = { Task };
